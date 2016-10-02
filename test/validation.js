@@ -14,8 +14,8 @@ describe('Validation Plugin', () => {
         _method: {
           definition: {
             params: {
-              a: (value, params) => value > 0 || 'Must be > 0',
-              b: (value, params) => value < 10 || 'Must be < 10'
+              a: (value) => value > 0 || 'Must be > 0',
+              b: (value) => value < 10 || 'Must be < 10'
             }
           }
         }
@@ -34,8 +34,8 @@ describe('Validation Plugin', () => {
         _method: {
           definition: {
             params: {
-              a: (value, params) => value > 0 || 'Must be > 0',
-              b: (value, params) => value < 10 || 'Must be < 10'
+              a: (value) => value > 0 || 'Must be > 0',
+              b: (value) => value < 10 || 'Must be < 10'
             }
           }
         }
@@ -54,8 +54,8 @@ describe('Validation Plugin', () => {
         _method: {
           definition: {
             params: {
-              a: (value, params) => value > 10 || 'Must be > 10',
-              b: (value, params) => value < 10 || 'Must be < 10'
+              a: (value) => value > 10 || 'Must be > 10',
+              b: (value) => value < 10 || 'Must be < 10'
             }
           }
         }
@@ -77,9 +77,9 @@ describe('Validation Plugin', () => {
           definition: {
             params: {
               a: {
-                a1: (value, params) => value > 10 || 'Must be > 10'
+                a1: (value) => value > 10 || 'Must be > 10'
               },
-              b: (value, params) => value < 10 || 'Must be < 10'
+              b: (value) => value < 10 || 'Must be < 10'
             }
           }
         }
@@ -101,12 +101,12 @@ describe('Validation Plugin', () => {
           definition: {
             params: {
               a: {
-                a1: (value, params) => value > 10 || 'Must be > 10',
+                a1: (value) => value > 10 || 'Must be > 10',
                 a2: {
-                  a3: (value, params) => value > 10 || 'Must be > 10'
+                  a3: (value) => value > 10 || 'Must be > 10'
                 }
               },
-              b: (value, params) => value < 10 || 'Must be < 10'
+              b: (value) => value < 10 || 'Must be < 10'
             }
           }
         }
@@ -128,10 +128,10 @@ describe('Validation Plugin', () => {
           definition: {
             params: {
               a: [
-                (value, params) => value > 10 || 'Must be > 10',
-                (value, params) => value > 12 || 'Must be > 12'
+                (value) => value > 10 || 'Must be > 10',
+                (value) => value > 12 || 'Must be > 12'
               ],
-              b: (value, params) => value < 10 || 'Must be < 10'
+              b: (value) => value < 10 || 'Must be < 10'
             }
           }
         }
